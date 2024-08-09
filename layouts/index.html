@@ -1,4 +1,16 @@
-{{ define "main" }}
+<!-- {{ define "main" }}
   <h1>{{ .Title }}</h1>
   {{ .Content }}
-{{ end }}
+{{ end }} -->
+
+{{ partial "header.html" . }}
+
+<h1>{{ .Params.title }}</h1>
+
+<p>{{ .Params.blurb }}</p>
+
+<h2>{{ .Params.section.heading }}</h2>
+
+<p>{{ .Params.section.text }}</p>
+
+{{ partial "footer.html" . }}

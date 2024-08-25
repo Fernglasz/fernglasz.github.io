@@ -1,0 +1,125 @@
+.campus {
+    padding: 0;
+    margin: 0 5%;
+}
+
+.campus h2 {
+    font-size: clamp(3.0rem, 5vw, 5rem);
+    color: #FFF;
+    margin: 10px;
+}
+
+.campus h2 .text-light-blue {
+    color: #85A5CC;
+}
+
+.campus-perks-container {
+    display: flex;
+    flex: 1;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/company.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 2rem;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.campus-perks-container img {
+    height: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+}
+
+.campus-perks {
+    padding: 2rem;
+    padding-bottom: 4rem;
+    width: 100%;
+    max-width: 1000px;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.campus-perks .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(10px, 5%, 1000px);
+}
+
+.campus-perks .grid .grid-item {
+    display: flex;
+    flex-direction: column;
+    height: min-content;
+    align-self: center;
+    padding: 40px 20px 20px 20px;
+    text-align: left;
+    font-size: 1.2rem;
+    background-color: #0052D4;
+    border-radius: 36px;
+}
+
+.campus .grid .item1 {
+    grid-column: span 2; /* Make the first item span across two columns */
+    background-color: transparent;
+    padding-top: 0px;
+  }
+
+.campus-perks .grid .grid-item p {
+    font-size: clamp(1rem, 1vw, 1.5rem);
+    color: #FFF;
+}
+
+@media (max-width: 768px) {
+    .campus-perks-container {
+        flex-direction: column;
+    }
+
+    .campus-perks-container img {
+        width: 100%;
+        aspect-ratio: 5/4;
+        object-fit: cover;
+    }
+
+    .campus p {
+        font-size: clamp(1rem, 1.75vw, 1.25rem);
+    }
+
+    .campus ul li {
+        font-size: clamp(0.9rem, 1.25vw, 1.25rem);
+    }
+
+    .campus-perks .grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .campus-perks .grid .grid-item {
+        width: clamp(200px, 40%, 500px);
+        margin-bottom: 40px;
+    }
+
+    .campus-perks .grid .item1 {
+        width: 100%;
+        margin-bottom: 0;
+    }
+}
+
+.campus .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px; /* Adjust the gap between grid items as needed */
+    grid-auto-flow: dense;
+  }
+  
+.campus .grid-container .item1 {
+    grid-column: span 2; /* Make the first item span across two columns */
+  }
+  
+.campus .grid-container .grid-item {
+    background-color: #f0f0f0; /* Just for visibility */
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+  }

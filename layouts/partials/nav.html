@@ -6,7 +6,7 @@
     <ul class="main-menu">
       {{ range.Site.Menus.main }}
       <li>
-        <a href="{{ .URL }}">{{ .Name }}</a>
+        <a href="{{ .URL }}" class="cta-button hide-underline" >{{ .Name }}</a>
       </li>
       {{ end }}
     </ul>

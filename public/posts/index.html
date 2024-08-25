@@ -5,12 +5,14 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<title>Posts | My New Hugo Site</title>
+	<title>Posts | Fernglasz</title>
 
 	<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
 	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+	<script src="/js/carousel.js"></script>
 
-	<link rel="alternate" type="application/rss+xml" href="//localhost:1313/posts/index.xml" title="My New Hugo Site" />
+
+	<link rel="alternate" type="application/rss+xml" href="//localhost:1313/posts/index.xml" title="Fernglasz" />
 	</head>
 
 <body>
@@ -18,16 +20,16 @@
 <header class="site-header">
   <nav class="site-nav">
     <a class="logo" href="/">
-      My New Hugo Site
+      Fernglasz
     </a>
     <ul class="main-menu">
       
       <li>
-        <a href="/posts">Posts</a>
+        <a href="https://www.fernglasz.com/signin" class="cta-button hide-underline" >Login</a>
       </li>
       
       <li>
-        <a href="/about">About</a>
+        <a href="https://www.fernglasz.com/signup" class="cta-button hide-underline" >Sign Up</a>
       </li>
       
     </ul>
@@ -52,11 +54,19 @@
 	</time>
 </article>
 
+<script>
+  document.addEventListener('click', function(event) {
+      if (event.target.tagName === 'A' && event.target.href) {
+          const path = new URL(event.target.href).pathname;
+          window.parent.postMessage({ path: path }, 'https://www.alphantech.fyi');
+      }
+  });
+</script>
 
 </main>
 	
 <footer>
-	<p>&copy;2024 My New Hugo Site</p>
+	<p>&copy;2024 Fernglasz</p>
 </footer>
 
 <script>

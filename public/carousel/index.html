@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>Carousels | Fernglasz</title>
+
+	<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+	<script src="/js/carousel.js"></script>
+
+
+	<link rel="alternate" type="application/rss+xml" href="//localhost:1313/carousel/index.xml" title="Fernglasz" />
+	</head>
+
+<body>
+
+<header class="site-header">
+  <nav class="site-nav">
+    <a class="logo" href="/">
+      Fernglasz
+    </a>
+    <ul class="main-menu">
+      
+      <li>
+        <a href="https://www.fernglasz.com/signin" class="cta-button hide-underline" >Login</a>
+      </li>
+      
+      <li>
+        <a href="https://www.fernglasz.com/signup" class="cta-button hide-underline" >Sign Up</a>
+      </li>
+      
+    </ul>
+  </nav>
+</header>
+
+
+<main class="content">
+
+
+<h1>Carousels</h1>
+
+
+
+
+<article class="post-snippet">
+  <h3>
+    <a href="/carousel/user1/">Card Title 1</a>
+  </h3>
+	<time datetime="0001-01-01T00:00:00Z">
+		January 1, 0001
+	</time>
+</article>
+
+<article class="post-snippet">
+  <h3>
+    <a href="/carousel/user6/">Card Title 6</a>
+  </h3>
+	<time datetime="0001-01-01T00:00:00Z">
+		January 1, 0001
+	</time>
+</article>
+
+<article class="post-snippet">
+  <h3>
+    <a href="/carousel/user2/">User 2</a>
+  </h3>
+	<time datetime="0001-01-01T00:00:00Z">
+		January 1, 0001
+	</time>
+</article>
+
+<article class="post-snippet">
+  <h3>
+    <a href="/carousel/user3/">User 3</a>
+  </h3>
+	<time datetime="0001-01-01T00:00:00Z">
+		January 1, 0001
+	</time>
+</article>
+
+<article class="post-snippet">
+  <h3>
+    <a href="/carousel/user4/">User 4</a>
+  </h3>
+	<time datetime="0001-01-01T00:00:00Z">
+		January 1, 0001
+	</time>
+</article>
+
+<article class="post-snippet">
+  <h3>
+    <a href="/carousel/user5/">User 5</a>
+  </h3>
+	<time datetime="0001-01-01T00:00:00Z">
+		January 1, 0001
+	</time>
+</article>
+
+<script>
+  document.addEventListener('click', function(event) {
+      if (event.target.tagName === 'A' && event.target.href) {
+          const path = new URL(event.target.href).pathname;
+          window.parent.postMessage({ path: path }, 'https://www.alphantech.fyi');
+      }
+  });
+</script>
+
+</main>
+	
+<footer>
+	<p>&copy;2024 Fernglasz</p>
+</footer>
+
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,20 @@
+.community {
+    padding: 0;
+    background-color: #FFF;
+    margin: 0 5%;
+}
+
+.community p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: hsl(0, 0%, 0%);
+    text-align: center;
+}
+
+.community .gradient h1 {
+    font-size: clamp(3rem, 6vw, 5rem);
+    background: linear-gradient(to right, #0052D4, #3ADDFF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}

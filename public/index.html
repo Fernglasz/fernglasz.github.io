@@ -6,12 +6,14 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<title>My New Hugo Site</title>
+	<title>Fernglasz</title>
 
 	<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
 	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+	<script src="/js/carousel.js"></script>
 
-	<link rel="alternate" type="application/rss+xml" href="//localhost:1313/index.xml" title="My New Hugo Site" />
+
+	<link rel="alternate" type="application/rss+xml" href="//localhost:1313/index.xml" title="Fernglasz" />
 	</head>
 
 <body>
@@ -19,16 +21,16 @@
 <header class="site-header">
   <nav class="site-nav">
     <a class="logo" href="/">
-      My New Hugo Site
+      Fernglasz
     </a>
     <ul class="main-menu">
       
       <li>
-        <a href="/posts">Posts</a>
+        <a href="https://www.fernglasz.com/signin" class="cta-button hide-underline" >Login</a>
       </li>
       
       <li>
-        <a href="/about">About</a>
+        <a href="https://www.fernglasz.com/signup" class="cta-button hide-underline" >Sign Up</a>
       </li>
       
     </ul>
@@ -39,18 +41,265 @@
 <main class="content">
 
 
-<h1>Hi There</h1>
 
-<p>Welcome to your new Hugo site.</p>
 
-<h2>A Subsection</h2>
+<link rel="stylesheet" href="/css/homepage/hero.css" type="text/css" media="all" />
+<section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        Looking to hire students, freelancers and professionals with 0-3 years of experience?
+      </h1>
+      <p class="hero-subtitle">
+        Your search stops here. Plan - Coordinate - Execute.
+      </p>
+      <button class="cta-button">Get Started</button>
+    </div>
+    <div class="hero-visuals">
+      <div class="hero-images">
+        <img src="/images/HeroBoyStudent.jpg" alt="Professional 1" class="hero-image hero-image-1" />
+        <img src="/images/HeroGirlStudent1.jpg" alt="Professional 2" class="hero-image hero-image-2" />
+        <img src="/images/HeroGirlStudent2.jpg" alt="Professional 3" class="hero-image hero-image-3" />
+      </div>
+      
+    </div>
+  </section>
 
-<p>You can put even more content in here.</p>
+<link rel="stylesheet" href="/css/homepage/community.css" type="text/css" media="all" />
+<section class="community">
+    <div class="container d-flex column align-center gradient">
+        <h1 class="m-0">You are in good company</h1>
+        <p>A community of young professionals, skilled freelancers and full - timers at your fingertips anytime anywhere
+        </p>
+    </div>
+</section>
+
+<link rel="stylesheet" href="/css/homepage/company.css" type="text/css" media="all" />
+<section class="company">
+  <div class="container company-perks-container">
+    <div class="company-perks">
+      <h2>If you are <br/> a <span class="text-yellow">Company</span></h2>
+      <ul class="list-unstyled">
+        <li>
+          
+          Freelance projects to students with AI-validated skills
+        </li>
+        <li>
+          
+          Minimize mis-hires by checking employer feedback
+        </li>
+        <li>
+          
+          Hire interns & full-time remotely/no campus visits needed
+        </li>
+        <li>
+          
+          Set criteria to filter applicants for your openings
+        </li>
+      </ul>
+    </div>
+    <div>
+      <img src="/images/company.jpg" class="company-image" alt="Company Image" />
+    </div>
+  </div>
+</section>
+
+<link rel="stylesheet" href="/css/homepage/talent.css" type="text/css" media="all" />
+<section class="talent">
+    <div class="container talent-perks-container">
+        <div>
+            <img src="/images/early-talent.jpg" class="early-talent-image" alt="Early Talent Image" />
+        </div>
+        <div class="talent-perks">
+            <h2>If you are <br /> an <span class="text-orange">Early Talent</span></h2>
+            <div class="grid">
+                <div class="grid-item">
+                    <img src="/images/Vector-3.svg" style="height: 30px; width: 30px;" alt="icon" />
+                    <p>We are a community of young professionals, skilled freelancers and full - timers at your
+                        fingertips anytime anywhere</p>
+                </div>
+                <div class="grid-item">
+                    <img src="/images/Vector-3.svg" style="height: 30px; width: 30px;" alt="icon" />
+                    <p>We are a community of young professionals, skilled freelancers and full - timers at your
+                        fingertips anytime anywhere</p>
+                </div>
+                <div class="grid-item">
+                    <img src="/images/Vector-3.svg" style="height: 30px; width: 30px;" alt="icon" />
+                    <p>We are a community of young professionals, skilled freelancers and full - timers at your
+                        fingertips anytime anywhere</p>
+                </div>
+                <div class="grid-item">
+                    <img src="/images/Vector-3.svg" style="height: 30px; width: 30px;" alt="icon" />
+                    <p>We are a community of young professionals, skilled freelancers and full - timers at your
+                        fingertips anytime anywhere</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<link rel="stylesheet" href="/css/homepage/campus.css" type="text/css" media="all" />
+<section class="campus">
+    <div class="container campus-perks-container">
+        <div class="campus-perks">
+            <div class="grid">
+                <div class="grid-item item1">
+                    <h2>If you are <br /> an <span class="text-light-blue">Campus</span></h2>
+                </div>
+                <div class="grid-item">
+                    <img src="/images/Vector-3.svg" style="height: 30px; width: 30px;" alt="icon" />
+                    <p>Strengthen connections with industry partners.</p>
+                </div>
+                <div class="grid-item">
+                    <img src="/images/Vector-3.svg" style="height: 30px; width: 30px;" alt="icon" />
+                    <p>Dedicated Platform for nurturing early talent.</p>
+                </div>
+                <div class="grid-item">
+                    <img src="/images/Vector-3.svg" style="height: 30px; width: 30px;" alt="icon" />
+                    <p>Real-world projects for enhanced job readiness</p>
+                </div>
+                <div class="grid-item">
+                    <img src="/images/Vector-3.svg" style="height: 30px; width: 30px;" alt="icon" />
+                    <p>Wider Reach to Companies for placements</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<link rel="stylesheet" href="/css/homepage/users.css" type="text/css" media="all" />
+<section class="users">
+    <div class="users-content">
+        <h2>Loved by <span class="text-primary">Our Users</span></h2>
+        <div class="carousel-controls">
+            <button class="carousel-control prev">
+                <img src="/images/icons/ArrowLeft.svg" alt="Previous">
+            </button>
+            <button class="carousel-control next">
+                <img src="/images/icons/ArrowRight.svg" alt="Next">
+            </button>
+        </div>
+    </div>
+    <div class="carousel">
+        <div class="carousel-container">
+            <div class="carousel-slides">
+                
+                
+                <div class="carousel-slide">
+                    <div class="card">
+                        <div class="card-body">
+                            <p>"Already have 5 applications on my post. All good quality profiles. This is awesome!"</p>
+                            <div class="user-info-container">
+                                <img src="/images/users/user1.jpg" alt="Card Title 1" class="user-image">
+                                <div class="user-info">
+                                    <p>Card Title 1</p>
+                                    <p class="location">New Delhi, India</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-slide">
+                    <div class="card">
+                        <div class="card-body">
+                            <p>"Yes done with the interview and we will be releasing offer letter for three of them by end of this month ."</p>
+                            <div class="user-info-container">
+                                <img src="/images/users/user2.jpg" alt="Card Title 6" class="user-image">
+                                <div class="user-info">
+                                    <p>Card Title 6</p>
+                                    <p class="location">New Delhi, India</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-slide">
+                    <div class="card">
+                        <div class="card-body">
+                            <p>""</p>
+                            <div class="user-info-container">
+                                <img src="/" alt="" class="user-image">
+                                <div class="user-info">
+                                    <p></p>
+                                    <p class="location">New Delhi, India</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-slide">
+                    <div class="card">
+                        <div class="card-body">
+                            <p>"Yes yes! Already onboarded 1 guy. This one seem to be good. I will actually close that position now that this guy looks to be doing good."</p>
+                            <div class="user-info-container">
+                                <img src="/images/users/user2.jpg" alt="User 2" class="user-image">
+                                <div class="user-info">
+                                    <p>User 2</p>
+                                    <p class="location">New Delhi, India</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-slide">
+                    <div class="card">
+                        <div class="card-body">
+                            <p>"Yes done with the interview and we will be releasing offer letter for three of them by end of this month"</p>
+                            <div class="user-info-container">
+                                <img src="/images/users/user3.jpg" alt="User 3" class="user-image">
+                                <div class="user-info">
+                                    <p>User 3</p>
+                                    <p class="location">New Delhi, India</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-slide">
+                    <div class="card">
+                        <div class="card-body">
+                            <p>"Already have 5 applications on my post. All good quality profiles. This is awesome!"</p>
+                            <div class="user-info-container">
+                                <img src="/images/users/user4.jpg" alt="User 4" class="user-image">
+                                <div class="user-info">
+                                    <p>User 4</p>
+                                    <p class="location">New Delhi, India</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-slide">
+                    <div class="card">
+                        <div class="card-body">
+                            <p>"Yes yes! Already onboarded 1 guy. This one seem to be good. I will actually close that position now that this guy looks to be doing good."</p>
+                            <div class="user-info-container">
+                                <img src="/images/users/user3.jpg" alt="User 5" class="user-image">
+                                <div class="user-info">
+                                    <p>User 5</p>
+                                    <p class="location">New Delhi, India</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+
+</section>
 
 </main>
 	
 <footer>
-	<p>&copy;2024 My New Hugo Site</p>
+	<p>&copy;2024 Fernglasz</p>
 </footer>
 
 <script>
@@ -67,4 +316,3 @@
 
 </body>
 </html>
-

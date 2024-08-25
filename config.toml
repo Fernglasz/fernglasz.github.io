@@ -1,14 +1,14 @@
-title = "My New Hugo Site"
+title = "Fernglasz"
 
 [menu]
   [[menu.main]]
-    identifier = "posts"
-    name = "Posts"
-    url = "/posts"
+    identifier = "login"
+    name = "Login"
+    url = "https://www.fernglasz.com/signin"
     weight = 10
 
   [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about"
+    identifier = "signup"
+    name = "Sign Up"
+    url = "https://www.fernglasz.com/signup"
     weight = 20

@@ -1,0 +1,122 @@
+.users {
+    padding: 0;
+    background-color: #FFF;
+    margin: 0 5%;
+}
+
+.users h2 {
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    color: #000;
+    margin: 10px;
+}
+
+.users h2 .text-primary {
+    color: #0052D4;
+}
+
+.users-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel-container {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .carousel-slide {
+    flex: 0 0 calc(100% / 3); /* Adjust to show 3 slides at a time */
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .carousel-controls {
+    display: flex;
+    align-items: center;
+    gap:10px;
+  }
+  
+  .carousel-control {
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+    border-radius: 30px;
+  }
+
+  .carousel-control:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  .user-info-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .users .user-image {
+    border-radius: 50%;
+    width: 63px;
+    height: 63px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+
+  .users .user-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .users .user-info p {
+    font-size: 16px;
+    margin: 0;
+    font-weight: bold;
+  }
+
+  .users .user-description p {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .user-info .location {
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+.users .card {
+    display: flex;
+    height: 282px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 1 0 0;
+    border-radius: 36px;
+    border: 1px solid var(--Secondary-Grey, #EFEFEF);
+    background: var(--Color, #FFF);
+    box-shadow: 2px 3px 8.4px 0px rgba(0, 0, 0, 0.25);
+  }
+  
+ .users .card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    justify-content: space-between;
+    height: 100%;
+  }

@@ -13,8 +13,22 @@
   </url><url>
     <loc>//localhost:1313/about/</loc>
   </url><url>
+    <loc>//localhost:1313/carousel/user1/</loc>
+  </url><url>
+    <loc>//localhost:1313/carousel/user6/</loc>
+  </url><url>
+    <loc>//localhost:1313/carousel/</loc>
+  </url><url>
     <loc>//localhost:1313/categories/</loc>
   </url><url>
     <loc>//localhost:1313/tags/</loc>
+  </url><url>
+    <loc>//localhost:1313/carousel/user2/</loc>
+  </url><url>
+    <loc>//localhost:1313/carousel/user3/</loc>
+  </url><url>
+    <loc>//localhost:1313/carousel/user4/</loc>
+  </url><url>
+    <loc>//localhost:1313/carousel/user5/</loc>
   </url>
 </urlset>

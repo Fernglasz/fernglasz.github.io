@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 	<meta charset="UTF-8" />
@@ -13,49 +14,67 @@
 
 
 	{{ with .OutputFormats.Get "rss" -}}
-		{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+	{{ printf `
+	<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 	{{ end -}}
 
 	<script>
 		if (window.self !== window.top) {  // Check if we're in an iframe
-		  document.addEventListener('click', function(event) {
-			if (event.target.tagName === 'A' && event.target.href) {
-				console.log(event, 'event1');
-			//   event.preventDefault(); // Prevent default navigation
-			  const link = new URL(event.target.href);
-		
-			//   if (link.origin === window.location.origin) {
-			// 	// Internal link
-			// 	const path = link.pathname + link.search + link.hash;
-			// 	window.parent.postMessage({ type: 'navigation', path: path }, '*');
-			//   } else {
-				// External link
-				event.preventDefault();
-				console.log(event.target.href, "event1 ---- target.href")
-				window.parent.postMessage({ type: 'navigation', url: event.target.href }, '*');
-				
-			//   }
-			}
-		  });
+			document.addEventListener('click', function (event) {
+				// Check if the clicked element is a button inside an 'a' tag
+				if (event.target.tagName === 'BUTTON' && event.target.closest('a') && event.target.closest('a').href) {
+
+					event.preventDefault();
+					const url = event.target.closest('a').href;
+					console.log(event.target.href, "event1 ---- target.href")
+					window.parent.postMessage({ type: 'navigate', url: url }, '*');
+				}
+				// Alternatively, if the clicked element is directly an 'a' tag
+				else if (event.target.tagName === 'A' && event.target.href) {
+					event.preventDefault();
+					console.log(event.target.href, "event2 ---- target.href")
+					window.parent.postMessage({ type: 'navigate', url: event.target.href }, '*');
+				}
+			});
+			// document.addEventListener('click', function (event) {
+			// 	console.log(event, 'event1', event.target.tagName, "tagname=====", event.target.href, "href====");
+			// 	if (event.target.tagName === 'A' && event.target.href) {
+			// 		console.log(event, 'event1');
+			// 		//   event.preventDefault(); // Prevent default navigation
+			// 		const link = new URL(event.target.href);
+
+			// 		//   if (link.origin === window.location.origin) {
+			// 		// 	// Internal link
+			// 		// 	const path = link.pathname + link.search + link.hash;
+			// 		// 	window.parent.postMessage({ type: 'navigation', path: path }, '*');
+			// 		//   } else {
+			// 		// External link
+			// 		event.preventDefault();
+			// 		console.log(event.target.href, "event1 ---- target.href")
+			// 		window.parent.postMessage({ type: 'navigation', url: event.target.href }, '*');
+
+			// 		//   }
+			// 	}
+			// });
 		} else {
-		  // If not in an iframe, handle external links normally
-		  document.addEventListener('click', function(event) {
-			console.log(event, 'event2');
-			if (event.target.tagName === 'A' && event.target.href) {
-			  const link = new URL(event.target.href);
-			  if (link.origin !== window.location.origin) {
-				event.preventDefault();
-				window.open(event.target.href, '_blank', 'noopener,noreferrer');
-			  }
-			}
-		  });
+			// If not in an iframe, handle external links normally
+			document.addEventListener('click', function (event) {
+				console.log(event, 'event2');
+				if (event.target.tagName === 'A' && event.target.href) {
+					const link = new URL(event.target.href);
+					if (link.origin !== window.location.origin) {
+						event.preventDefault();
+						window.open(event.target.href, '_blank', 'noopener,noreferrer');
+					}
+				}
+			});
 		}
-		</script>
+	</script>
 
 </head>
 
 <body>
 
-{{ partial "nav.html" . }}
+	{{ partial "nav.html" . }}
 
-<main class="content">
+	<main class="content">

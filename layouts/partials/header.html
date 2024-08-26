@@ -19,6 +19,7 @@
 	<script>
 		if (window.self !== window.top) {  // Check if we're in an iframe
 		  document.addEventListener('click', function(event) {
+			console.log(event, 'event1');
 			if (event.target.tagName === 'A' && event.target.href) {
 			//   event.preventDefault(); // Prevent default navigation
 			  const link = new URL(event.target.href);
@@ -37,6 +38,7 @@
 		} else {
 		  // If not in an iframe, handle external links normally
 		  document.addEventListener('click', function(event) {
+			console.log(event, 'event2');
 			if (event.target.tagName === 'A' && event.target.href) {
 			  const link = new URL(event.target.href);
 			  if (link.origin !== window.location.origin) {

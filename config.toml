@@ -4,11 +4,11 @@ title = "Fernglasz"
   [[menu.main]]
     identifier = "login"
     name = "Login"
-    url = "https://fernglasz.web.app/signin"
+    url = "/signin"
     weight = 10
 
   [[menu.main]]
     identifier = "signup"
     name = "Sign Up"
-    url = "https://fernglasz.web.app/signup"
+    url = "/signup"
     weight = 20

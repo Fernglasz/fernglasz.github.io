@@ -1,6 +1,6 @@
 .users {
     padding: 0;
-    background-color: #FFF;
+    background-color: transparent;
     margin: 0 5%;
 }
 
@@ -11,7 +11,7 @@
 }
 
 .users h2 .text-primary {
-    color: #0052D4;
+    color: #0B63E5;
 }
 
 .users-content {

@@ -23,10 +23,10 @@
 			document.addEventListener('click', function (event) {
 				// Check if the clicked element is a button inside an 'a' tag
 				if (event.target.tagName === 'BUTTON' && event.target.closest('a') && event.target.closest('a').href) {
-
+					console.log(event, "event1")
 					event.preventDefault();
 					const url = event.target.closest('a').href;
-					console.log(event.target.href, "event1 ---- target.href")
+					console.log(url, "url event1 ---- target.href")
 					window.parent.postMessage({ type: 'navigate', url: url }, '*');
 				}
 				// Alternatively, if the clicked element is directly an 'a' tag

@@ -4,11 +4,11 @@ title = "Fernglasz"
   [[menu.main]]
     identifier = "login"
     name = "Login"
-    url = "http://localhost:3000/signin"
+    url = "/signin"
     weight = 10
 
   [[menu.main]]
     identifier = "signup"
     name = "Sign Up"
-    url = "http://localhost:3000/signup"
+    url = "/signup"
     weight = 20

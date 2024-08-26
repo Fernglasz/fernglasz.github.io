@@ -16,7 +16,7 @@
 		{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 	{{ end -}}
 
-	<!-- <script>
+	<script>
 		if (window.self !== window.top) {  // Check if we're in an iframe
 		  document.addEventListener('click', function(event) {
 			if (event.target.tagName === 'A' && event.target.href) {
@@ -26,11 +26,11 @@
 			  if (link.origin === window.location.origin) {
 				// Internal link
 				const path = link.pathname + link.search + link.hash;
-				window.parent.postMessage({ type: 'navigation', path: path }, 'https://fernglasz.web.app/');
+				window.parent.postMessage({ type: 'navigation', path: path }, '*');
 			  } else {
 				// External link
 				event.preventDefault();
-				window.parent.postMessage({ type: 'externalNavigation', url: event.target.href }, 'https://fernglasz.web.app/');
+				window.parent.postMessage({ type: 'externalNavigation', url: event.target.href }, '*');
 			  }
 			}
 		  });
@@ -46,7 +46,7 @@
 			}
 		  });
 		}
-		</script> -->
+		</script>
 
 </head>
 

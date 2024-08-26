@@ -51,6 +51,9 @@
 }
 
 @media (max-width: 768px) {
+    .company h2 {
+        font-size: clamp(2.25rem, 3vw, 5rem);
+    }
     .company-perks-container {
         flex-direction: column-reverse;
     }

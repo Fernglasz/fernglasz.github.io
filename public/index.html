@@ -21,22 +21,35 @@
 <header class="site-header">
   <nav class="site-nav">
     <a class="logo" href="/">
-      Fernglasz
+      <img src="/images/logo/Fernglasz.svg" alt="Fernglasz">
+      <p>Gateway to Early Talent</p>
     </a>
-    <ul class="main-menu">
-      
-      <li>
-        <a href="https://www.fernglasz.com/signin" class="cta-button hide-underline" >Login</a>
-      </li>
-      
-      <li>
-        <a href="https://www.fernglasz.com/signup" class="cta-button hide-underline" >Sign Up</a>
-      </li>
-      
-    </ul>
+    
+    <div class="menu-container">
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <ul class="main-menu">
+        
+        <li>
+          <a href="https://www.fernglasz.com/signin" class="hide-underline">
+            <button class="cta-button">Login</button>
+          </a>
+        </li>
+        
+        <li>
+          <a href="https://www.fernglasz.com/signup" class="hide-underline">
+            <button class="cta-button">Sign Up</button>
+          </a>
+        </li>
+        
+      </ul>
+    </div>
   </nav>
 </header>
-
 
 <main class="content">
 
@@ -52,7 +65,9 @@
       <p class="hero-subtitle">
         Your search stops here. Plan - Coordinate - Execute.
       </p>
-      <button class="cta-button">Get Started</button>
+      <a href="https://www.fernglasz.com/signup" class="hide-underline">
+        <button class="cta-button hide-underline" >Get Started</button>
+      </a>
     </div>
     <div class="hero-visuals">
       <div class="hero-images">
@@ -63,6 +78,32 @@
       
     </div>
   </section>
+
+<link rel="stylesheet" href="/css/homepage/keystats.css" type="text/css" media="all" />
+<section class="keystats">
+    <div class="keystats-content">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2>6000+</h2>
+                            <p>Students</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h2>100+</h2>
+                            <p>Companies</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h2>10X</h2>
+                            <p>Improved Candidates Quality</p>
+                        </div>
+                    </div>
+
+    </div>
+
+</section>
 
 <link rel="stylesheet" href="/css/homepage/community.css" type="text/css" media="all" />
 <section class="community">
@@ -169,7 +210,7 @@
 <link rel="stylesheet" href="/css/homepage/users.css" type="text/css" media="all" />
 <section class="users">
     <div class="users-content">
-        <h2>Loved by <span class="text-primary">Our Users</span></h2>
+        <h2>Loved by <span class="text-primary" style="display: inline-block;">Our Users</span></h2>
         <div class="carousel-controls">
             <button class="carousel-control prev">
                 <img src="/images/icons/ArrowLeft.svg" alt="Previous">
@@ -182,7 +223,6 @@
     <div class="carousel">
         <div class="carousel-container">
             <div class="carousel-slides">
-                
                 
                 <div class="carousel-slide">
                     <div class="card">

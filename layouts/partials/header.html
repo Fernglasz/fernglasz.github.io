@@ -24,15 +24,15 @@
 			//   event.preventDefault(); // Prevent default navigation
 			  const link = new URL(event.target.href);
 		
-			  if (link.origin === window.location.origin) {
-				// Internal link
-				const path = link.pathname + link.search + link.hash;
-				window.parent.postMessage({ type: 'navigation', path: path }, '*');
-			  } else {
+			//   if (link.origin === window.location.origin) {
+			// 	// Internal link
+			// 	const path = link.pathname + link.search + link.hash;
+			// 	window.parent.postMessage({ type: 'navigation', path: path }, '*');
+			//   } else {
 				// External link
 				event.preventDefault();
 				window.parent.postMessage({ type: 'externalNavigation', url: event.target.href }, '*');
-			  }
+			//   }
 			}
 		  });
 		} else {

@@ -30,8 +30,8 @@
 			// 	window.parent.postMessage({ type: 'navigation', path: path }, '*');
 			//   } else {
 				// External link
-				// event.preventDefault();
-				window.parent.postMessage({ type: 'externalNavigation', url: event.target.href }, '*');
+				event.preventDefault();
+				window.parent.postMessage({ type: 'navigation', url: event.target.href }, '*');
 				console.log(event.target.href, "event1 ---- target.href")
 			//   }
 			}

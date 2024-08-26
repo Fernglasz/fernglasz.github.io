@@ -19,8 +19,8 @@
 	<script>
 		if (window.self !== window.top) {  // Check if we're in an iframe
 		  document.addEventListener('click', function(event) {
-			console.log(event, 'event1');
 			if (event.target.tagName === 'A' && event.target.href) {
+				console.log(event, 'event1');
 			//   event.preventDefault(); // Prevent default navigation
 			  const link = new URL(event.target.href);
 		
@@ -31,8 +31,9 @@
 			//   } else {
 				// External link
 				event.preventDefault();
-				window.parent.postMessage({ type: 'navigation', url: event.target.href }, '*');
 				console.log(event.target.href, "event1 ---- target.href")
+				window.parent.postMessage({ type: 'navigation', url: event.target.href }, '*');
+				
 			//   }
 			}
 		  });

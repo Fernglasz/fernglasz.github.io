@@ -70,6 +70,9 @@
 }
 
 @media (max-width: 768px) {
+    .campus h2 {
+        font-size: clamp(2.25rem, 3vw, 5rem);
+    }
     .campus-perks-container {
         flex-direction: column;
     }

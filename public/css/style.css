@@ -3,13 +3,13 @@
 @font-face {
   font-family: "OpenSansRegular";
   src: local("OpenSansRegular"),
-    url("./assets/fonts/OpenSans-Regular.ttf") format("truetype");
+    url("/fonts/OpenSans-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "DMSansBold";
   src: local("DMSansBold"),
-    url("./fonts/DMSans-Bold.ttf") format("truetype");
+    url("/fonts/DMSans-Bold.ttf") format("truetype");
   font-weight: bold;
 }
 
@@ -17,7 +17,7 @@
 @font-face {
   font-family: "DMSansBoldItalic";
   src: local("DMSansBoldItalic"),
-    url("./assets/fonts/DMSans-BoldItalic.ttf") format("truetype");
+    url("/fonts/DMSans-BoldItalic.ttf") format("truetype");
   font-weight: bold;
 }
 
@@ -136,11 +136,26 @@ img {
 }
 
 .site-nav .logo {
-  font-family: DMSansBold;
+  font-family: DMSansRegular;
   color: #FFF;
-  font-weight: bold;
   padding-left: 0;
   text-decoration-line: none;
+}
+
+.site-nav .logo img {
+  height: 2rem;
+}
+
+.site-nav .logo p {
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+.menu-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
 }
 
 .main-menu {
@@ -148,7 +163,6 @@ img {
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 1rem;
 }
 
 .cta-button {
@@ -164,7 +178,25 @@ img {
 
 .cta-button:hover {
   background-color: #FFF;
-  color: #0056b3;
+  color: #032557;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  width: 25px;
+  height: 3px;
+  background-color: #FFF;
+  margin: 2px;
+  transition: 0.3s;
 }
 
 .card {
@@ -184,12 +216,43 @@ img {
   padding: 15px;
 }
 
-@media screen and (max-width: 48rem) {
-
-  .site-nav,
-  .main-menu {
-    flex-direction: column;
+@media screen and (max-width: 768px) {
+  .site-nav .logo img {
+    height: 1rem;
   }
+
+  .main-menu {
+    display: none;
+    flex-direction: column;
+    top: 60px;
+    right: 0;
+    position: absolute;
+    width: 65vw;
+    background-color: #FFF;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+
+  .menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  /* Show the menu when checkbox is checked */
+  .menu-toggle:checked~.main-menu {
+    display: flex;
+    z-index: 10;
+  }
+}
+
+@media screen and (max-width: 48rem) {
 
   .site-nav a {
     padding: 0.5rem;

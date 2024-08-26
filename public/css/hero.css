@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 80px 10%;
-    background-color: #0052D4;
+    background-color: #0B63E5;
     color: #fff;
     position: relative;
     overflow: hidden;
@@ -29,7 +29,7 @@
   
   .cta-button {
     background-color: #fff;
-    color: #0052D4;
+    color: #0B63E5;
     border: none;
     padding: 12px 24px;
     font-size: 1rem;

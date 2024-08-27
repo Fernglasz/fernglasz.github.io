@@ -27,8 +27,6 @@
 
 .campus-perks-container img {
     height: 100%;
-    aspect-ratio: 4/5;
-    object-fit: cover;
 }
 
 .campus-perks {

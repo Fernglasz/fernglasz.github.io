@@ -25,21 +25,21 @@
 @font-face {
   font-family: "DMSansItalic";
   src: local("DMSansItalic"),
-    url("./assets/fonts/DMSans-Italic.ttf") format("truetype");
+    url("/fonts/DMSans-Italic.ttf") format("truetype");
   font-weight: bold;
 }
 
 @font-face {
   font-family: "DMSansMedium";
   src: local("DMSansMedium"),
-    url("./assets/fonts/DMSans-Medium.ttf") format("truetype");
+    url("/fonts/DMSans-Medium.ttf") format("truetype");
   font-weight: bold;
 }
 
 @font-face {
   font-family: "DMSansMediumItalic";
   src: local("DMSansMediumOItalic"),
-    url("./assets/fonts/DMSans-MediumItalic.ttf") format("truetype");
+    url("/fonts/DMSans-MediumItalic.ttf") format("truetype");
   font-weight: bold;
 }
 
@@ -55,7 +55,7 @@
 @font-face {
   font-family: "DMSansRegular500";
   src: local("DMSansRegular500"),
-    url("./assets/fonts/DMSans-Regular.ttf") format("truetype");
+    url("/fonts/DMSans-Regular.ttf") format("truetype");
   font-weight: 500px;
 }
 

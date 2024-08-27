@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 
 	<meta charset="UTF-8" />
@@ -12,11 +13,64 @@
 	<script src="/js/carousel.js"></script>
 
 
-	</head>
+	<script>
+		if (window.self !== window.top) {  
+			document.addEventListener('click', function (event) {
+				
+				if (event.target.tagName === 'BUTTON' && event.target.closest('a') && event.target.closest('a').href) {
+					console.log(event, "event1")
+					event.preventDefault();
+					const url = event.target.closest('a').href;
+					console.log(url, "url event1 ---- target.href")
+					window.parent.postMessage({ type: 'navigate', url: url }, '*');
+				}
+				
+				else if (event.target.tagName === 'A' && event.target.href) {
+					event.preventDefault();
+					console.log(event.target.href, "event2 ---- target.href")
+					window.parent.postMessage({ type: 'navigate', url: event.target.href }, '*');
+				}
+			});
+			
+			
+			
+			
+			
+			
+
+			
+			
+			
+			
+			
+			
+			
+			
+			
+
+			
+			
+			
+		} else {
+			
+			document.addEventListener('click', function (event) {
+				console.log(event, 'event2');
+				if (event.target.tagName === 'A' && event.target.href) {
+					const link = new URL(event.target.href);
+					if (link.origin !== window.location.origin) {
+						event.preventDefault();
+						window.open(event.target.href, '_blank', 'noopener,noreferrer');
+					}
+				}
+			});
+		}
+	</script>
+
+</head>
 
 <body>
 
-<header class="site-header">
+	<header class="site-header">
   <nav class="site-nav">
     <a class="logo" href="/">
       <img src="/images/logo/Fernglasz.svg" alt="Fernglasz">
@@ -32,13 +86,13 @@
       <ul class="main-menu">
         
         <li>
-          <a href="https://www.fernglasz.com/signin" class="hide-underline">
+          <a href="/signin" class="hide-underline">
             <button class="cta-button">Login</button>
           </a>
         </li>
         
         <li>
-          <a href="https://www.fernglasz.com/signup" class="hide-underline">
+          <a href="/signup" class="hide-underline">
             <button class="cta-button">Sign Up</button>
           </a>
         </li>
@@ -48,8 +102,7 @@
   </nav>
 </header>
 
-<main class="content">
-
+	<main class="content">
 
 <h1 class="post-title">User 5</h1>
 
@@ -73,19 +126,19 @@
   <div class="social-content">
     <p>&copy;2024 Copyright, Fernglasz. All rights reserved.</p>
     <div class="social-links">
-      <a href="https://facebook.com/fernglasz" target="_blank" rel="noopener noreferrer">
-        <img src="/images/icons/Facebook.svg" alt="Twitter">
+      <a href="https://www.facebook.com/profile.php?id=61554843952339&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
+        <img src="/images/icons/Facebook.svg" alt="Facebook">
       </a>
       <a href="https://twitter.com/fernglasz" target="_blank" rel="noopener noreferrer">
-        <img src="/images/icons/Social Icons-3.svg" alt="Twitter">
+        <img src="/images/icons/Twitter.svg" alt="Twitter">
       </a>
       <a href="https://www.linkedin.com/company/fernglasz/" target="_blank" rel="noopener noreferrer">
         <img src="/images/icons/LinkedIn.svg" alt="LinkedIn">
       </a>
-      <a href="https://www.instagram.com/fernglasz/" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.instagram.com/fernglasz?igsh=YmFuZ2k4dGFyd2pq" target="_blank" rel="noopener noreferrer">
         <img src="/images/icons/Instagram.svg" alt="Instagram">
       </a>
-      <a href="https://reddit.com/fernglasz" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.reddit.com/r/FernGlasz/" target="_blank" rel="noopener noreferrer">
         <img src="/images/icons/Reddit.svg" alt="Reddit">
       </a>
     </div>

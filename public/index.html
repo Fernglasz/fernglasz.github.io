@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta name="generator" content="Hugo 0.131.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 
@@ -13,12 +14,66 @@
 	<script src="/js/carousel.js"></script>
 
 
+	
 	<link rel="alternate" type="application/rss+xml" href="//localhost:1313/index.xml" title="Fernglasz" />
-	</head>
+	<script>
+		if (window.self !== window.top) {  
+			document.addEventListener('click', function (event) {
+				
+				if (event.target.tagName === 'BUTTON' && event.target.closest('a') && event.target.closest('a').href) {
+					console.log(event, "event1")
+					event.preventDefault();
+					const url = event.target.closest('a').href;
+					console.log(url, "url event1 ---- target.href")
+					window.parent.postMessage({ type: 'navigate', url: url }, '*');
+				}
+				
+				else if (event.target.tagName === 'A' && event.target.href) {
+					event.preventDefault();
+					console.log(event.target.href, "event2 ---- target.href")
+					window.parent.postMessage({ type: 'navigate', url: event.target.href }, '*');
+				}
+			});
+			
+			
+			
+			
+			
+			
+
+			
+			
+			
+			
+			
+			
+			
+			
+			
+
+			
+			
+			
+		} else {
+			
+			document.addEventListener('click', function (event) {
+				console.log(event, 'event2');
+				if (event.target.tagName === 'A' && event.target.href) {
+					const link = new URL(event.target.href);
+					if (link.origin !== window.location.origin) {
+						event.preventDefault();
+						window.open(event.target.href, '_blank', 'noopener,noreferrer');
+					}
+				}
+			});
+		}
+	</script>
+
+</head>
 
 <body>
 
-<header class="site-header">
+	<header class="site-header">
   <nav class="site-nav">
     <a class="logo" href="/">
       <img src="/images/logo/Fernglasz.svg" alt="Fernglasz">
@@ -34,13 +89,13 @@
       <ul class="main-menu">
         
         <li>
-          <a href="https://www.fernglasz.com/signin" class="hide-underline">
+          <a href="/signin" class="hide-underline">
             <button class="cta-button">Login</button>
           </a>
         </li>
         
         <li>
-          <a href="https://www.fernglasz.com/signup" class="hide-underline">
+          <a href="/signup" class="hide-underline">
             <button class="cta-button">Sign Up</button>
           </a>
         </li>
@@ -50,8 +105,7 @@
   </nav>
 </header>
 
-<main class="content">
-
+	<main class="content">
 
 
 
@@ -62,9 +116,11 @@
         Looking to hire students, freelancers and professionals with 0-3 years of experience?
       </h1>
       <p class="hero-subtitle">
-        Your search stops here. Plan - Coordinate - Execute.
+        Your search stops here.
+        <br/>
+        Plan - Coordinate - Execute.
       </p>
-      <a href="https://www.fernglasz.com/signup" class="hide-underline">
+      <a href="/signup" class="hide-underline">
         <button class="cta-button hide-underline" >Get Started</button>
       </a>
     </div>
@@ -138,7 +194,7 @@
         </li>
       </ul>
     </div>
-    <div>
+    <div style="width: 50%;">
       <img src="/images/company.jpg" class="company-image" alt="Company Image" />
     </div>
   </div>

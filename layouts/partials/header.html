@@ -30,7 +30,7 @@
 					window.parent.postMessage({ type: 'navigate', url: url }, '*');
 				}
 				// Alternatively, if the clicked element is directly an 'a' tag
-				else if (event.target.tagName === 'A' && event.target.href) {
+				else if ((event.target.tagName === 'A' || event.target.tagName === 'IMG') && event.target.href) {
 					event.preventDefault();
 					console.log(event.target.href, "event2 ---- target.href")
 					window.parent.postMessage({ type: 'externalNavigation', url: event.target.href }, '*');

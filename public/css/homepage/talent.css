@@ -1,6 +1,6 @@
 .talent {
     padding: 0;
-    background-color: #FFF;
+    background-color: transparent;
     margin: 0 5%;
 }
 
@@ -23,8 +23,7 @@
 }
 
 .talent-perks-container img {
-    height: 100%;
-    aspect-ratio: 4/5;
+    height: 100%;;
     object-fit: cover;
 }
 

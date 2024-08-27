@@ -33,7 +33,7 @@
 				else if (event.target.tagName === 'A' && event.target.href) {
 					event.preventDefault();
 					console.log(event.target.href, "event2 ---- target.href")
-					window.parent.postMessage({ type: 'navigate', url: event.target.href }, '*');
+					window.parent.postMessage({ type: 'externalNavigation', url: event.target.href }, '*');
 				}
 			});
 			// document.addEventListener('click', function (event) {

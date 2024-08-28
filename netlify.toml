@@ -5,7 +5,7 @@
   [[headers]]
 for = "/*"
   [headers.values]
-  Content-Security-Policy = "frame-ancestors 'self' http://localhost:3000 https://fernglasz.web.app"
+  Content-Security-Policy = "frame-ancestors 'self' http://localhost:3000 https://fernglasz.web.app https://www.fernglasz.com"
 
 [[headers]]
 for = "/*"

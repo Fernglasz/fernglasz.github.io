@@ -5,7 +5,7 @@
 }
 
 .talent h2 {
-    font-size: clamp(3.5rem, 5vw, 5rem);
+    font-size: clamp(3.5rem, 5vw, 6rem);
     color: #FFF;
     margin: 10px;
 }
@@ -15,7 +15,8 @@
 }
 
 .talent-perks-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
     flex: 1;
     background-color: #0B63E5;
     border-radius: 2rem;
@@ -23,7 +24,8 @@
 }
 
 .talent-perks-container img {
-    height: 100%;;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 
@@ -50,7 +52,7 @@
 
 
 .talent-perks .grid .grid-item p {
-    font-size: clamp(1rem, 1vw, 1.5rem);
+    font-size: clamp(1rem, 1vw, 2.5rem);
     color: #FFF;
 }
 
@@ -59,6 +61,7 @@
         font-size: clamp(2rem, 2.75vw, 5rem);
     }
     .talent-perks-container {
+        display: flex;
         flex-direction: column;
     }
 

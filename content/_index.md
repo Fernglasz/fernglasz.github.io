@@ -7,6 +7,7 @@ section:
 feature_title: "Unique Feature"
 feature_description: "This feature is only available on the homepage."
 hero_title: "Looking to hire students, freelancers and professionals with 0-3 years of experience?"
-hero_subtitle: "Your search stops here. Plan - Coordinate - Execute."
+hero_subtitle_1: "Your search stops here."
+hero_subtitle_2: "Plan - Coordinate - Execute."
 hero_button: "Get Started"
 ---

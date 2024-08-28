@@ -63,7 +63,7 @@ body {
   color: #333;
   font-size: 125%;
   line-height: 1.5;
-  max-width: 80rem;
+  max-width: 120rem;
   padding: 1rem;
   margin: 0 auto;
   font-family: "DMSansRegular";
@@ -179,6 +179,24 @@ img {
   justify-content: space-between;
 }
 
+.social-content a {
+  text-decoration: none;
+}
+
+.social-content img {
+  height: clamp(20px, 3vw, 40px);
+}
+
+.social-content img:hover {
+  opacity: 0.75;
+  transform: scale(1.1);
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
 .menu-container {
   display: flex;
   align-items: center;
@@ -285,6 +303,7 @@ img {
 
   .social-content {
     flex-direction: column;
+    gap: 1rem;
   }
 }
 

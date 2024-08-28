@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 
 	<meta charset="UTF-8" />
@@ -28,59 +29,6 @@
 					event.preventDefault();
 					console.log(event.target.href, "event2 ---- target.href")
 					window.parent.postMessage({ type: 'externalNavigation', url: event.target.href }, '*');
-				}
-			});
-			
-			
-			
-			
-			
-			
-
-			
-			
-			
-			
-			
-			
-			
-			
-			
-
-			
-			
-			
-		} else {
-			
-			document.addEventListener('click', function (event) {
-				console.log(event, 'event2');
-				if (event.target.tagName === 'A' && event.target.href) {
-					const link = new URL(event.target.href);
-					if (link.origin !== window.location.origin) {
-						event.preventDefault();
-						window.open(event.target.href, '_blank', 'noopener,noreferrer');
-					}
-				}
-			});
-		}
-	</script>
-
-	<script>
-		if (window.self !== window.top) {  
-			document.addEventListener('click', function (event) {
-				
-				if (event.target.tagName === 'BUTTON' && event.target.closest('a') && event.target.closest('a').href) {
-					console.log(event, "event1")
-					event.preventDefault();
-					const url = event.target.closest('a').href;
-					console.log(url, "url event1 ---- target.href")
-					window.parent.postMessage({ type: 'navigate', url: url }, '*');
-				}
-				
-				else if (event.target.tagName === 'A' && event.target.href) {
-					event.preventDefault();
-					console.log(event.target.href, "event2 ---- target.href")
-					window.parent.postMessage({ type: 'navigate', url: event.target.href }, '*');
 				}
 			});
 			

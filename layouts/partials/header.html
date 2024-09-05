@@ -23,16 +23,13 @@
 			document.addEventListener('click', function (event) {
 				// Check if the clicked element is a button inside an 'a' tag
 				if (event.target.tagName === 'BUTTON' && event.target.closest('a') && event.target.closest('a').href) {
-					console.log(event, "event1")
 					event.preventDefault();
 					const url = event.target.closest('a').href;
-					console.log(url, "url event1 ---- target.href")
 					window.parent.postMessage({ type: 'navigate', url: url }, '*');
 				}
 				// Alternatively, if the clicked element is directly an 'a' tag
 				else if ((event.target.tagName === 'A' || event.target.tagName === 'IMG') && event.target.href) {
 					event.preventDefault();
-					console.log(event.target.href, "event2 ---- target.href")
 					window.parent.postMessage({ type: 'externalNavigation', url: event.target.href }, '*');
 				}
 			});
@@ -59,7 +56,6 @@
 		} else {
 			// If not in an iframe, handle external links normally
 			document.addEventListener('click', function (event) {
-				console.log(event, 'event3');
 				if (event.target.tagName === 'A' && event.target.href) {
 					const link = new URL(event.target.href);
 					if (link.origin !== window.location.origin) {

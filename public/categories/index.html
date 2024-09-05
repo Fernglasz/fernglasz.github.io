@@ -56,7 +56,7 @@
 		} else {
 			
 			document.addEventListener('click', function (event) {
-				console.log(event, 'event2');
+				console.log(event, 'event3');
 				if (event.target.tagName === 'A' && event.target.href) {
 					const link = new URL(event.target.href);
 					if (link.origin !== window.location.origin) {

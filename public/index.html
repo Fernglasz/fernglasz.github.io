@@ -57,7 +57,7 @@
 		} else {
 			
 			document.addEventListener('click', function (event) {
-				console.log(event, 'event2');
+				console.log(event, 'event3');
 				if (event.target.tagName === 'A' && event.target.href) {
 					const link = new URL(event.target.href);
 					if (link.origin !== window.location.origin) {
@@ -127,9 +127,14 @@
         <br/>
         Plan - Coordinate - Execute.
       </p>
-      <a href="/signup" class="hide-underline">
-        <button class="cta-button hide-underline" >Get Started</button>
-      </a>
+      <div style="display: flex; gap: 1rem;">
+        <a href="/signup" class="hide-underline d-flex w-auto">
+          <button class="cta-button hide-underline" >Get Started</button>
+        </a>
+        <a href="/browse-jobs" class="hide-underline d-flex w-auto">
+          <button class="cta-button hide-underline" >Browse Jobs</button>
+        </a>
+      </div>
     </div>
     <div class="hero-visuals">
       <div class="hero-images">

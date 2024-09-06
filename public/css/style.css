@@ -114,6 +114,10 @@ img {
   list-style: none;
 }
 
+.w-auto {
+  width: auto;
+}
+
 /* NAVIGATION */
 
 .site-header {

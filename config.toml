@@ -6,9 +6,3 @@ title = "Fernglasz"
     name = "Login"
     url = "/signin"
     weight = 10
-
-  [[menu.main]]
-    identifier = "signup"
-    name = "Sign Up"
-    url = "/signup"
-    weight = 20

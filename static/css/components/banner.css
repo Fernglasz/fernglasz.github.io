@@ -1,0 +1,25 @@
+.banner {
+    background-color: #FFC500;
+    padding: 0.5rem;
+    position: relative;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    top: -1rem;
+    display: flex;
+    justify-content: center;
+
+}
+
+.banner .closure-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 20px;
+}
+
+.reset-button {
+    all: unset;
+    display: inline-block;
+    cursor: pointer;
+}

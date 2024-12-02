@@ -1,33 +1,39 @@
 <section class="hero">
-    <div class="hero-content">
-      <h1 class="hero-title">
-        {{ .Params.hero_title }}
-      </h1>
-      <p class="hero-subtitle">
-        {{ .Params.hero_subtitle_1 }}
-        <br/>
-        {{ .Params.hero_subtitle_2 }}
-      </p>
-      <div style="display: flex; gap: 1rem;">
-        <a href="/signup" class="hide-underline d-flex w-auto">
-          <button class="cta-button hide-underline" >Get Started</button>
-        </a>
-        <a href="/browse-jobs" class="hide-underline d-flex w-auto">
-          <button class="cta-button hide-underline" >Browse Jobs</button>
-        </a>
-      </div>
+  <div class="hero-content">
+    <h1 class="hero-title">
+      {{ .Params.hero_title }}
+    </h1>
+    <p class="hero-subtitle">
+      {{ .Params.hero_subtitle_1 }}
+      <br />
+      {{ .Params.hero_subtitle_2 }}
+    </p>
+    <div style="display: flex; gap: 1rem;">
+      <!-- <a href="/signup" class="hide-underline d-flex w-auto">
+        <button class="cta-button hide-underline">Get Started</button>
+      </a> -->
+      <a href="/browse-jobs" class="hide-underline d-flex w-auto">
+        <button class="cta-button hide-underline">Browse Jobs</button>
+      </a>
     </div>
-    <div class="hero-visuals">
-      <div class="hero-images">
-        <img src="https://fern-staging-media-static-assets.s3.ap-south-1.amazonaws.com/static_assets/website_content/HeroBoyStudent-2.png" loading="lazy" alt="Professional 1" class="hero-image hero-image-1" />
-        <img src="https://fern-staging-media-static-assets.s3.ap-south-1.amazonaws.com/static_assets/website_content/HeroGirlStudent1-2.png" loading="lazy" alt="Professional 2" class="hero-image hero-image-2" />
-        <img src="https://fern-staging-media-static-assets.s3.ap-south-1.amazonaws.com/static_assets/website_content/HeroGirlStudent2-2.png" loading="lazy" alt="Professional 3" class="hero-image hero-image-3" />
-        
-      </div>
-      <!-- <div class="hero-shapes">
+  </div>
+  <div class="hero-visuals">
+    <div class="hero-images">
+      <img
+        src="https://fern-staging-media-static-assets.s3.ap-south-1.amazonaws.com/static_assets/website_content/HeroBoyStudent-2.png"
+        loading="lazy" alt="Professional 1" class="hero-image hero-image-1" />
+      <img
+        src="https://fern-staging-media-static-assets.s3.ap-south-1.amazonaws.com/static_assets/website_content/HeroGirlStudent1-2.png"
+        loading="lazy" alt="Professional 2" class="hero-image hero-image-2" />
+      <img
+        src="https://fern-staging-media-static-assets.s3.ap-south-1.amazonaws.com/static_assets/website_content/HeroGirlStudent2-2.png"
+        loading="lazy" alt="Professional 3" class="hero-image hero-image-3" />
+
+    </div>
+    <!-- <div class="hero-shapes">
         <img src={triangleShape} alt="Triangle shape" class="hero-shape hero-shape-triangle" />
         <img src={circleShape} alt="Circle shape" class="hero-shape hero-shape-circle" />
         <img src={semiCircleShape} alt="Semi-circle shape" class="hero-shape hero-shape-semi-circle" />
       </div> -->
-    </div>
-  </section>
+  </div>
+</section>

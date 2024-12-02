@@ -9,6 +9,7 @@
 	<title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
 
 	<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="/css/components/banner.css" type="text/css" media="all" />
 	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 	<script src="/js/carousel.js"></script>
 
@@ -71,6 +72,8 @@
 </head>
 
 <body>
+
+	{{ partial "components/banner.html" . }}
 
 	{{ partial "nav.html" . }}
 
